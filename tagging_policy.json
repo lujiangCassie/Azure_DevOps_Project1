@@ -1,0 +1,39 @@
+{
+    "properties": {
+      "displayName": "tagging-policy",
+      "policyType": "Custom",
+      "mode": "All",
+      "description": "Deny the creations of resources without tag",
+      "metadata": {
+        "createdBy": "c7ef1f53-dc36-4233-82e5-0ba9787adc8a",
+        "createdOn": "2024-01-12T22:35:19.9537917Z",
+        "updatedBy": null,
+        "updatedOn": null
+      },
+      "parameters": {},
+      "policyRule": {
+        "if": {
+          "allOf": [
+            {
+              "value": "[empty(field('tags'))]",
+              "equals": "true"
+            }
+          ]
+        },
+        "then": {
+          "effect": "deny"
+        }
+      }
+    },
+    "id": "/subscriptions/caaa878b-eed5-4834-b533-a904c3cf1f0b/providers/Microsoft.Authorization/policyDefinitions/6c365247-a423-4115-ab88-0b4128da883d",
+  "type": "Microsoft.Authorization/policyDefinitions",
+  "name": "6c365247-a423-4115-ab88-0b4128da883d",
+  "systemData": {
+    "createdBy": "lu.jiang@headway.com",
+    "createdByType": "User",
+    "createdAt": "2024-01-12T22:35:19.9439483Z",
+    "lastModifiedBy": "lu.jiang@headway.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2024-01-12T22:35:19.9439483Z"
+  }
+}
